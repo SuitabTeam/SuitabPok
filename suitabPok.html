@@ -1,0 +1,29 @@
+<!-- simple-todos.html -->
+<head>
+  <title>Todo List</title>
+
+<!-- add a form below the h1 -->
+  <form class="new-task">
+    <input type="text" name="text" placeholder="Type to add new tasks" />
+  </form>
+
+  
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <li>{{text}}</li>
+</template>
